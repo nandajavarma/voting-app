@@ -3,6 +3,7 @@ image: gitpod/workspace-full
 tasks:
   - name: Build
     init: |
+      sudo apt-get install docker-ce=5:26.0.1-1~ubuntu.22.04~jammy docker-ce-cli=5:26.0.1-1~ubuntu.22.04~jammy
       docker pull postgres:15-alpine
       docker-compose build
     command: |
